@@ -1,0 +1,67 @@
+- provide(:title, t('.title'))
+
+%h2
+  = t('.title')
+
+.row.vert-offset-top-2
+  .col-xs-12
+    = simple_nested_form_for(resource, as: resource_name, url: registration_path(resource_name), defaults: { required: false }, html: { method: :put }) do |f|
+      = render 'shared/error_messages', object: f.object
+
+      .row.form-inputs
+        .col-xs-12
+          .row
+            .col-xs-12.col-sm-6
+              .row
+                .col-xs-12
+                  = person_photo(f.object, :standart, class: 'img-thumbnail')
+                - if f.object.photo.present?
+                  .col-xs-12
+                    = link_to t('links.crop_photo'), crop_image_path(f.object.id), class: 'btn btn-default'
+              .row
+                .col-sm-12
+                  = f.input :photo, wrapper: :vertical_file_input, as: :file
+                  = f.input :photo_cache, as: :hidden
+                  - if f.object.passport.present?
+                    = link_to t('links.show_passport'), "/people/show_passport/#{f.object.id}", target: :blank, class: 'btn btn-default'
+                  - else
+                    %p.text-warning
+                      = t('hints.no_passport')
+                  = f.input :passport, wrapper: :vertical_file_input, as: :file
+                  = f.input :passport_cache, as: :hidden
+            .col-xs-12.col-sm-6
+              = f.input :email, autofocus: true
+              - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                %p
+                  Currently waiting confirmation for: #{resource.unconfirmed_email}
+              = f.input :spiritual_name
+              = f.input :name
+              = f.input :middle_name
+              = f.input :surname
+        .col-xs-12
+          .row
+            .col-xs-12.col-sm-6
+              = f.input :birthday, as: :string, input_html: { id: 'datepicker', data: { locale: "#{locale}" } }
+              = f.input :education
+              = f.input :marital_status, collection: Person::MARITAL_STATUSES,
+                                 label_method: lambda { |element| t("simple_form.options.person.marital_status.#{element.first}") }
+              = f.input :friends_to_be_with
+              = f.input :emergency_contact
+              = render 'shared/nested_telephones', f: f
+            .col-xs-12.col-sm-6
+              = f.input :gender, collection: [[:male, true], [:female, false]],
+                                 label_method: lambda { |element| t("simple_form.options.person.gender.#{element.first}") }
+              = f.input :work
+              = f.input :password, autocomplete: 'off'
+              = f.input :password_confirmation
+              = f.input :current_password
+
+      .row.form-actions
+        .col-xs-12.text-center
+          = f.button :submit, t('links.update'), class: 'btn-lg'
+
+.row.vert-offset-top-1
+  .col-xs-12
+    .pull-right
+      = link_to t('links.delete'), registration_path(resource_name), class: 'btn btn-danger',
+                                        data: { confirm: t('devise.links.confirmations.delete') }, method: :delete

@@ -1,0 +1,62 @@
+uk:
+  simple_form:
+    "yes": 'Так'
+    "no": 'Ні'
+    required:
+      text: "обов'язково"
+      mark: '*'
+    error_notification:
+      default_message: 'Виправте ці помилки будь ласка:'
+    options:
+      person:
+        gender:
+          male:   'Чоловіча'
+          female: 'Жіноча'
+        marital_status:
+          single:           'немає відносин'
+          in_relationship:  'у відносинах/цивільному шлюбі'
+          married:          'одружений/заміжня'
+          divorced:         'розлучений/розлучена'
+          widowed:          'вдівець/вдова'
+    labels:
+      person:
+        password:               'Пароль'
+        password_confirmation:  'Підтвердження паролю'
+        current_password:       'Поточний пароль'
+        email:                  'Електронна пошта'
+        photo:                  'Фотографія на студентський квиток'
+        passport:               'Фотографія першої сторінки паспорту'
+        spiritual_name:         "Духовне ім'я (залиште пустим, якщо нема)"
+        name:                   "Ім'я"
+        middle_name:            'По батькові'
+        surname:                'Прізвище'
+        phone:                  'Телефон'
+        gender:                 'Стать'
+        birthday:               'День народження'
+        education:              'Освіта (спеціальність)'
+        work:                   'Робота (професія)'
+        emergency_contact:      'Контакт для надзвичайних випадків'
+        marital_status:         'Сімейний стан'
+        friends_to_be_with:     'Друзі в Академії'
+    placeholders:
+      person:
+        email:                  'test@example.com'
+        spiritual_name:         'Аді Даса дас'
+        name:                   'Антон'
+        middle_name:            'Іванович'
+        surname:                'Петренко'
+        birthday:               '31.02.1980'
+        education:              "Інженер з комп'ютерних систем, економіст"
+        work:                   'Тестувальник, веб програміст, менеджер'
+        emergency_contact:      'Тато: +380 (50) 111-22-44'
+        new:
+          password:               '******'
+          password_confirmation:  '******'
+    hints:
+      person:
+        edit:
+          password:           'Залиште пустим, якщо не хочете змінювати'
+          current_password:   'Введіть Ваш поточний пароль, щоб підтвердити зміни'
+          friends_to_be_with: 'якщо Ви прийшли до Академії разом з друзями, вкажіть іх імена через кому, щоб бути з ними у одній группі'
+        new:
+          friends_to_be_with: 'якщо Ви прийшли до Академії разом з друзями, вкажіть іх імена через кому, щоб бути з ними у одній группі'

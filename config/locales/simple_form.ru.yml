@@ -1,0 +1,62 @@
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательно'
+      mark: '*'
+    error_notification:
+      default_message: 'Исправьте эти ошибки, побалуйста:'
+    options:
+      person:
+        gender:
+          male:   'Мужской'
+          female: 'Женский'
+        marital_status:
+          single:           'нет отношений'
+          in_relationship:  'в отношениях/гражданском браке'
+          married:          'женат/замужем'
+          divorced:         'разведен/разведена'
+          widowed:          'вдовец/вдова'
+    labels:
+      person:
+        password:               'Пароль'
+        password_confirmation:  'Подтверждение пароля'
+        current_password:       'Текущий пароль'
+        email:                  'Электронная почта'
+        photo:                  'Фотография на студенческий билет'
+        passport:               'Фотография первой страницы паспорта'
+        spiritual_name:         'Духовное имя (оставьте пустым, если нет)'
+        name:                   'Имя'
+        middle_name:            'Отчество'
+        surname:                'Фамилия'
+        phone:                  'Телефон'
+        gender:                 'Пол'
+        birthday:               'День рождения'
+        education:              'Образование (специальность)'
+        work:                   'Работа (профессия)'
+        emergency_contact:      'Контакт для экстренных случаев'
+        marital_status:         'Семейное положение'
+        friends_to_be_with:     'Друзья в Академии'
+    placeholders:
+      person:
+        email:                  'test@example.com'
+        spiritual_name:         'Ади Даса дас'
+        name:                   'Антон'
+        middle_name:            'Иванович'
+        surname:                'Петренко'
+        birthday:               '31.02.1980'
+        education:              'Инженер компьютерних систем, экономист'
+        work:                   'Тестировщик, вэб програмист, менеджер'
+        emergency_contact:      'Отец: +380 (50) 111-22-44'
+        new:
+          password:               '******'
+          password_confirmation:  '******'
+    hints:
+      person:
+        edit:
+          password:           'Оставьте пустым, если не хотите менять'
+          current_password:   'Введите Ваш текущий пароль, чтобы подтвердить изменения'
+          friends_to_be_with: 'если Вы пришли в Академию вместе с друзьями, укажите их имена через запятую, чтобы быть с ними в одной группе'
+        new:
+          friends_to_be_with: 'если Вы пришли в Академию вместе с друзьями, укажите их имена через запятую, чтобы быть с ними в одной группе'

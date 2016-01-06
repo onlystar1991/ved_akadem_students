@@ -1,0 +1,125 @@
+ru:
+  not_authorized: 'Не хватает прав, чтобы выполнить это действие.'
+  recaptcha:
+    errors:
+      incorrect-captcha-sol:  'Проверка не пройдена.'
+      recaptcha_unreachable:  'Невозможно связаться с сервисом проверки.'
+  defaults:
+    links:
+      academic_groups:      'Группы'
+      academic_groups_add:  'Добавить группу'
+      academic_groups_list: 'Список групп'
+      agreement:            'Соглашение'
+      changelog:            'Журнал изменений'
+      class_schedules:      'Расписание'
+      class_schedules_add:  'Добавить'
+      class_schedules_list: 'Список'
+      courses:              'Предметы'
+      courses_add:          'Добавить предмет'
+      courses_list:         'Список предметов'
+      main_menu:            'Действия'
+      people:               'Люди'
+      people_add:           'Добавить человека'
+      people_list:          'Список всех'
+  locale_label: Русский (RUS)
+  application_title: Студенты Киевской Духовной Академии Сознания Кришны
+  links:
+    apply_to_program: 'Подать заявление'
+    crop_photo:       'Обрезать фотографию'
+    delete:           'Удалить'
+    edit:             'Редактировать'
+    edit_profile:     'Редактировать профиль'
+    graduate:         'Выпуск'
+    show_passport:    'Показать паспорт'
+    update:           'Сохранить'
+    withdraw:         'Отозвать заявление'
+  hints:
+    no_passport: 'Нет прикрепленного паспорта'
+  content:
+    courses:                  'Предметы рассматриваемые на курсе:'
+    apply_to_programs:        'У Вас есть возможность поступить на такие курсы:'
+    confirm_withdraw:         'Вы уверены, что хотите отозвать заявление на обучение?'
+    you_applied:              'Вы подали заявление на курс'
+    application_requirements: 'Чтобы Ваше заявление было рассмотрено, НЕОБХОДИМО выполнить следующие условия:'
+    fill_questionnaire:       'Заполнить'
+    attach_photo:             'Добавить фотографию'
+    attach_passport:          'Добавить паспорт'
+    in_profile:               'в профиль'
+    form_has_errors:
+      one:    'Исправьте пожалуйста %{count} ошибку:'
+      few:    'Исправьте пожалуйста %{count} ошибки:'
+      many:   'Исправьте пожалуйста %{count} ошибок:'
+      other:  'Исправьте пожалуйста %{count} ошибок:'
+  answers:
+    edit:
+      update: 'Отправить ответ'
+  crops:
+    crop_image:
+      title:        'Кадрирование изображения'
+      select_area:  'Обозначьте площадь для отображения'
+      preview:      'Предпросмотр'
+      guide:        'Пример'
+      crop:         'Применить'
+    error:          'Ошибка: не получилось кадрировать изображение'
+  devise:
+    passwords:
+      new:
+        restore_password: 'Восстановление пароля'
+        send_me:          'Отправить инструкции для восстановления'
+      edit:
+        change_password:        'Изменить пароль'
+        new_password:           'Новий пароль'
+        password_confirmation:  'Подтверждение нового пароля'
+        change:                 'Изменить пароль'
+  users:
+    emails:
+      new:
+        forgot_email: 'Забыли электронную почту?'
+        enter_phone:  'Введите телефон'
+        get_email:    'Напомнить почту'
+      create:
+        title:        'Адреса электронной почты закрепленные за этим номером телефона:'
+        no_telephone: 'Такой номер телефона не зарегистрирован.'
+    registrations:
+      edit:
+        title:  'Редактирование профиля'
+      new:
+        i_agree_html: 'Я прочитал(а) и согласен(на) с <a href="/privacy_agreement" target="_blank">соглашением на обработку персональных данных</a>'
+        title:        'Регистрация'
+  static_pages:
+    home:
+      message_for_group:          'Объявление для группы:'
+      schedules_title:            'Ваше персональное расписание'
+      student_of_academic_group:  'Вы студент группы'
+      title:                      'Домашняя'
+  people:
+    show:
+      not_adult:            '(еще нет 18! нужно разрешение от родителей)'
+      psycho_test_results:  'Результаты психологического теста'
+  academic_groups:
+    show:
+      active_students_count:    'Активных студентов:'
+      attendance_template_pdf:  ' Бланк посещаемости'
+      administrator:            'Администратор'
+      birthday:                 'День рождения'
+      curator:                  'Куратор'
+      full_name:                'Имя'
+      group_list_pdf:           ' PDF c фото'
+      group_servants:           'Слуги группы'
+      no_pending_schedules:     'Нет грядущих событий'
+      photo:                    'Фото'
+      praepostor:               'Староста'
+      tab_general:              'Осмотр'
+      tab_group_list:           'Список группы'
+      tab_schedules:            'Расписание'
+      telephones:               'Телефоны'
+  class_schedules:
+    create_and_clone: 'Создать и копировать'
+    table_headers:
+      course:     'Предмет'
+      teacher:    'Лектор'
+      subject:    'Тема'
+      groups:     'Группы'
+      classroom:  'Аудитория'
+      time:       'Запланированное время'
+      actions:    ''

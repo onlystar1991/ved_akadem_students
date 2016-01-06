@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: va_db_tst
+  username: postgres

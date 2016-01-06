@@ -1,0 +1,34 @@
+= render 'shared/under_construction'
+- provide(:title, @course.title)
+
+.row
+  .col-xs-12
+    %h1
+      = @course.title
+
+  .col-xs-12.clearfix
+    .pull-right
+      - if policy(@course).edit?
+        = link_to t('links.edit'), edit_course_path(@course), class: 'btn btn-xs btn-primary'
+      - if policy(@course).destroy?
+        = link_to t('links.delete'), course_path(@course), method: :delete,
+                  data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger'
+
+  .col-xs-12
+    .row
+      .col-xs-12
+        %strong
+          Description:
+      .col-xs-12.col-sm-6
+        = @course.description
+
+    - if @course.teacher_profiles.any?
+      .row.vert-offset-top-1
+        .col-xs-12
+          %strong
+            Associated teachers:
+        .col-xs-12
+          %ul
+            - @course.teacher_profiles.each do |profile|
+              %li
+                = profile.complex_name

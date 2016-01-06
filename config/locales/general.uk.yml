@@ -1,0 +1,125 @@
+uk:
+  not_authorized: 'Не вистачає прав, щоб виконати цю дію.'
+  recaptcha:
+    errors:
+      incorrect-captcha-sol:  'Перевірка невдала.'
+      recaptcha_unreachable:  "Неможливо звя'язатися з сервісом перевірки."
+  defaults:
+    links:
+      academic_groups:      'Групи'
+      academic_groups_add:  'Додати групу'
+      academic_groups_list: 'Список груп'
+      agreement:            'Згода'
+      changelog:            'Журнал змін'
+      class_schedules:      'Розклад'
+      class_schedules_add:  'Додати'
+      class_schedules_list: 'Список'
+      courses:              'Предмети'
+      courses_add:          'Додати предмет'
+      courses_list:         'Список предметів'
+      main_menu:            'Дії'
+      people:               'Люди'
+      people_add:           'Додати людину'
+      people_list:          'Список усіх'
+  locale_label: Українська (UKR)
+  application_title: Студенти Київської Духовної Академії Свідомості Кришни
+  links:
+    apply_to_program: 'Подати заяву'
+    crop_photo:       'Обрізати фотографію'
+    delete:           'Видалити'
+    edit:             'Редагувати'
+    edit_profile:     'Редагувати профіль'
+    graduate:         'Випуск'
+    show_passport:    'Показати паспорт'
+    update:           'Зберегти'
+    withdraw:         'Відкликати заяву'
+  hints:
+    no_passport: 'Немає закріпленого паспорту'
+  content:
+    courses:                  'Предмети що розглядаються на курсі:'
+    apply_to_programs:        'У Вас є можливість поступити на такі курси:'
+    confirm_withdraw:         'Ви впевнені, що хочете відкликати заяву на навчання?'
+    you_applied:              'Ви подали заяву на курс'
+    application_requirements: 'Щоб Ваша заява була розглянута, НЕОБХІДНО виконати наступні умови:'
+    fill_questionnaire:       'Заповнити'
+    attach_photo:             'Додати фотографію'
+    attach_passport:          'Додати паспорт'
+    in_profile:               'до профілю'
+    form_has_errors:
+      one:    'Виправте будьласка %{count} помилку:'
+      few:    'Виправте будьласка %{count} помилки:'
+      many:   'Виправте будьласка %{count} помилок:'
+      other:  'Виправте будьласка %{count} помилки:'
+  answers:
+    edit:
+      update: 'Надіслати відповідь'
+  crops:
+    crop_image:
+      title:    'Кадрування зображення'
+      select_area:  'Визначте площу для відображення'
+      preview:      'Передперегляд'
+      guide:        'Приклад'
+      crop:         'Застосувати'
+    error:          'Помилка: не вдалося кадрировати зображення'
+  devise:
+    passwords:
+      new:
+        restore_password: 'Відновлення паролю'
+        send_me:          'Відправити інструкції для відновлення'
+      edit:
+        change_password:        'Зміна паролю'
+        new_password:           'Новий пароль'
+        password_confirmation:  'Підтвердження нового паролю'
+        change:                 'Змінити пароль'
+  users:
+    emails:
+      new:
+        forgot_email: 'Забули електронну пошту?'
+        enter_phone:  'Введіть телефон'
+        get_email:    'Нагадати пошту'
+      create:
+        title:        'Адреси електронної пошти закреплені за цим номером телефону:'
+        no_telephone: 'Такий номер телефону не зареєстрований.'
+    registrations:
+      edit:
+        title:  'Редагування профілю'
+      new:
+        i_agree_html: 'Я прочитав(ла) і згоден(на) зі <a href="/privacy_agreement" target="_blank">згодою на обробку персональних даних</a>'
+        title:        'Реєстрація'
+  static_pages:
+    home:
+      message_for_group:          "Об'ява для групи:"
+      schedules_title:            'Ваш персональний розклад'
+      student_of_academic_group:  'Ви студент групи'
+      title:                      'Домашня'
+  people:
+    show:
+      not_adult:            '(ще нема 18! треба дозвіл від батьків)'
+      psycho_test_results:  'Результати психологічного тесту'
+  academic_groups:
+    show:
+      active_students_count:    'Активних студентів:'
+      attendance_template_pdf:  ' Бланк відвідуванності'
+      administrator:            'Адміністратор'
+      birthday:                 'День народження'
+      curator:                  'Куратор'
+      full_name:                "Ім'я"
+      group_list_pdf:           ' PDF із фото'
+      group_servants:           'Слуги групи'
+      no_pending_schedules:     'Немає майбутніх подій'
+      photo:                    'Фото'
+      praepostor:               'Староста'
+      tab_general:              'Огляд'
+      tab_group_list:           'Список групи'
+      tab_schedules:            'Розклад'
+      telephones:               'Телефони'
+  class_schedules:
+    create_and_clone: 'Створити і копіювати'
+    table_headers:
+      course:     'Предмет'
+      teacher:    'Лектор'
+      subject:    'Тема'
+      groups:     'Групи'
+      classroom:  'Аудиторія'
+      time:       'Запланований час'
+      actions:    ''

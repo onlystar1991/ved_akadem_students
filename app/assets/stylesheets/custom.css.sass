@@ -1,0 +1,133 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import 'bootstrap-datetimepicker'
+
+$placeholder: #ccc
+
+body
+  padding-top: 60px
+
+/* header */
+
+.navbar-brand
+  font-size: 1.8em
+  text-transform: uppercase
+  letter-spacing: -1px
+  padding-top: 10px
+  font-weight: bold
+  line-height: 1
+
+/* footer */
+
+footer
+  margin-top: 45px
+  padding-top: 5px
+  border-top: 1px solid #777
+  a
+    color: #666
+    &:hover
+      color: #222
+      text-decoration: none
+  ul
+    float: right
+    list-style: none
+    li
+      float: left
+      margin-left: 10px
+
+/* miscellaneous */
+
+.debug_dump
+  clear: both
+  float: left
+  width: 100%
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+::-moz-placeholder
+  color: $placeholder !important
+
+\:-moz-placeholder
+  color: $placeholder !important
+
+\:-ms-input-placeholder
+  color: $placeholder !important
+
+::-webkit-input-placeholder
+  color: $placeholder !important
+
+.border-1
+  border: 1px solid #777
+
+/* errors */
+
+.field_with_errors
+  display: inline-block
+  label
+    color: red
+  input, select
+    border-color: red
+    border-style: solid
+
+/* crop page */
+
+.crop-preview
+  width: 150px
+  height: 200px
+  overflow: hidden
+  outline: 1px solid #777
+
+/* devise flash */
+
+.alert-error
+  @extend .alert-danger
+
+.alert-alert
+  @extend .alert-warning
+
+.alert-notice
+  @extend .alert-info
+
+/* recaptcha error */
+
+.alert-recaptcha_error
+  @extend .alert-danger
+
+/* telephones */
+
+.intl-tel-input
+  width: 100%
+  .flag
+    background-image: asset-url('flags.png') !important
+
+/* changelog */
+
+ul.changelog
+  list-style-type: none
+  padding-left: 0
+
+  li
+    padding-left: 2em
+
+    &:before
+      font-weight: bold
+      font-family: monospace
+
+    &.addition
+      @extend .text-info
+
+      &:before
+        content: '+ '
+
+    &.deletion
+      @extend .text-danger
+
+      &:before
+        content: '- '
+
+    &.modification
+      @extend .text-warning
+
+      &:before
+        content: '* '

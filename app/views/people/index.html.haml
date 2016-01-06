@@ -1,0 +1,33 @@
+= render 'shared/under_construction'
+- provide(:title, "All People")
+
+.row
+  .col-xs-12
+    %h1 People
+
+.row
+  .col-xs-12
+    .table-responsive
+      %table.table.table-condensed.table-striped
+        %thead
+          %tr
+            %th #
+            %th Photo
+            %th Full Name
+            %th Group or Application
+        %tbody
+          - @people.each_with_index do |person, index|
+            %tr
+              %td
+                #{@people.default_per_page * ( @people.current_page.pred) + index.next}
+              %td
+                = thumb_with_pop(person)
+              %td
+                = link_to_show_person_or_name(person)
+              %td
+                - if person.last_academic_group.present? && person.last_academic_group.active?
+                  = link_to person.last_academic_group.title, academic_group_path(person.last_academic_group)
+                - elsif person.study_application.present?
+                  = person.study_application.program["title_#{locale}"]
+  .col-xs-12.text-center
+    = paginate @people

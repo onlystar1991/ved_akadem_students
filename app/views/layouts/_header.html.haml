@@ -1,0 +1,36 @@
+%header.navbar.navbar-inverse.navbar-fixed-top{ role: 'navigation' }
+  .container
+    .navbar-header
+      %button.navbar-toggle{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '.navbar-collapse' }
+        %span.sr-only
+          Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'AcademyStudents', root_path, class: 'navbar-brand'
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if show_admin_menu?
+          %li.dropdown
+            %a.dropdown-toggle{ href: '#', :'data-toggle' => :dropdown }
+              = t('defaults.links.main_menu')
+            %ul.dropdown-menu{ role: :menu }
+              - models_for_generic_menu.each do |singular, plural|
+                - if send("show_#{plural}_menu?")
+                  %li.dropdown
+                    %a.dropdown-toggle{ href: '#', :'data-toggle' => :dropdown }
+                      = t("defaults.links.#{plural}")
+                    %ul.dropdown-menu{ role: :menu }
+                      - if current_person.can_act?("#{singular}:new")
+                        %li
+                          = link_to(t("defaults.links.#{plural}_add"), send("new_#{singular}_path"))
+                      - if current_person.can_act?("#{singular}:index")
+                        %li
+                          = link_to(t("defaults.links.#{plural}_list"), send("#{plural}_path"))
+        %li
+          = link_to t(:locale_label), locales_toggle_path
+        %li
+          - if person_signed_in?
+            = link_to(t('devise.links.sign_out'), destroy_person_session_path, method: :delete)
+          - else
+            = link_to(t('devise.links.sign_in'), new_person_session_path)

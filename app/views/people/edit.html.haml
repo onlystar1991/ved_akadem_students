@@ -1,0 +1,9 @@
+= render 'shared/under_construction'
+- provide(:title, complex_name(@person, true))
+
+.row
+  .col-xs-12
+    %h1
+      = @person.complex_name
+
+  = render 'form'
